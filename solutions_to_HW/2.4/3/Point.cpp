@@ -16,6 +16,9 @@ Point::Point() :x(0), y(0)
 {
     // cout<<"Creating a point.."<<endl;
 };
+Point::Point(double d): x(d), y(d){};
+Point::Point(double d, double d2): x(d), y(d2){};
+
 Point::~Point()
 {
     // cout<<"Destroying a point.."<<endl;
@@ -65,4 +68,9 @@ Point& Point::operator*=(double factor){
     x = x*factor;
     y = y*factor;
     return *this;
+}
+
+std::ostream& operator <<(std::ostream &os, const Point &p){
+     os<<"Point("<<p.X()<<","<<p.Y()<<")";
+     return os;
 }
