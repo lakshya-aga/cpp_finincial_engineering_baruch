@@ -27,7 +27,7 @@ int main()
                                           guarantee to have base functionality. */
     
     Shape* sp;                         // Create pointer to a shape variable.
-    //sp = &p;                         // Point in a shape variable. Possible? Yes.
+    sp = &p;                         // Point in a shape variable. Possible? Yes.
     sp = new Point;
     cout<<sp->ToString()<<endl;        // What is printed? ID of Point p.
     delete sp;                         /* The base class pointer (sp) points to the derived object (p).

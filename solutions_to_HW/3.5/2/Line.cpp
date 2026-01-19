@@ -6,24 +6,25 @@
 #include <string>
 #include <cmath>
 using namespace std;
-    Line::Line(){
-        cout<<"Line Constructor Called"<<endl;
+    Line::Line(): Shape(){
+        // cout<<"Default Line Constructor Called"<<endl;
     };
-    Line::Line(Point start, Point end){
+    Line::Line(Point start, Point end): Shape(){
         start = start;
         end = end;
-        cout<<"Line Constructor Called"<<endl;
+        // cout<<"2nd Line Constructor Called"<<endl;
         
     };
-    Line::Line(Line &obj)
+    Line::Line(Line &obj): Shape()
     {
+        Shape::operator=(obj);
         start = obj.start;
         end = obj.end;
-        cout<<"Copy Constructor Called"<<endl;
+        // cout<<"Copy Line Constructor Called"<<endl;
 
     }; //Copy Constructor
     Line::~Line(){
-        cout<<"Destructor Called"<<endl;
+        // cout<<"Line Destructor Called"<<endl;
         
     };
     void Line::Start(Point p){
@@ -39,7 +40,11 @@ using namespace std;
         return end;
     }
     std::string Line::ToString() const{
-        return Line::Start().ToString() + Line::End().ToString();
+        stringstream ss;
+        ss<<Shape::ToString()<<", ";
+        ss<<Line::Start().ToString()<<Line::End().ToString();
+
+        return  ss.str();
     }
     double Line::Length() const{
         return start.Distance(end);
