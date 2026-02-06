@@ -55,8 +55,8 @@ namespace Lakshya
         template<typename T>
         Array<T>::Array()
         {
-            m_data = new T[10];
-            m_size = 10;
+            m_size = default_size;
+            m_data = new T[m_size];
         }
         template<typename T>
         Array<T>::Array(int n)

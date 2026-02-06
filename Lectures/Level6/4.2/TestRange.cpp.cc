@@ -8,7 +8,7 @@
 //
 
 #include "Range.cpp"
-#include <iostream.h>
+#include <iostream>
 
 int main()
 {
@@ -26,7 +26,7 @@ int main()
 	bool test3 = bearish.contains(currentPrice);
 	
 	if (test1 == false && test2 == false && test3 == true)
-		cout << "Everything OK\n";
+		std::cout << "Everything OK\n";
 
 	// Create a range with float as underlying type
 	float closingPriceII (90.0);

@@ -58,6 +58,12 @@ Point Point::operator+(const Point &p) const{
     temp.Y(y+p.y);
     return temp;
 }
+Point Point::operator*(const Point &p) const{
+    Point temp;
+    temp.X(x*p.x);
+    temp.Y(y*p.y);
+    return temp;
+}
 bool Point::operator==(const Point &p) const{
     return p.x==x && p.y==y;
 }

@@ -8,13 +8,13 @@ using namespace std;
 
 int main()
 {
-    NumericArray<int> arr;
-    NumericArray<int> brr;
-    NumericArray<int> crr = arr+brr;
-    NumericArray<int> drr = arr*10;
+    NumericArray<Lakshya::CAD::Point> arr;
+    NumericArray<Lakshya::CAD::Point> brr;
+    NumericArray<Lakshya::CAD::Point> crr = arr+brr;
+    // NumericArray<Lakshya::CAD::Point> drr = arr*10;
+    arr.SetElement(0, {1,1});
+    brr.SetElement(0, {2,2});
     double dot_ans = arr.DotProduct(brr);
-    arr.SetElement(0, 5);
-    brr.SetElement(0, 4);
     cout<<dot_ans;
 
 

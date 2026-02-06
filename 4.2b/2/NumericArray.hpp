@@ -8,7 +8,7 @@ class NumericArray: public Array<T>
 {
     public:
         NumericArray();
-        NumericArray(int init_size)
+        NumericArray(int init_size);
         ~NumericArray();
         NumericArray& operator=(const NumericArray& arr);
         NumericArray& operator+(const NumericArray& arr);

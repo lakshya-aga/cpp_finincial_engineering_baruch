@@ -2,22 +2,21 @@
 #ifndef NUMERIC_CPP
 #define NUMERIC_CPP
 
+
 template <typename T>
-NumericArray<T>::NumericArray()
+NumericArray<T>::NumericArray(): Array<T>()
 {
-    Array<T>();
 }
 
 template <typename T>
-NumericArray<T>::NumericArray(int init_size)
+NumericArray<T>::NumericArray(int init_size): Array<T>(init_size)
 {
-    Array<T>(init_size);
 }
 
 template <typename T>
 NumericArray<T>::~NumericArray()
 {
-    ~Array<T>();
+    
 }
 
 template <typename T>
@@ -41,7 +40,7 @@ NumericArray<T>& NumericArray<T>::operator+(const NumericArray<T>& arr)
     }
     for(int i=0; i<s; i++)
     {
-        temp.Array<T>::SetElement(i, Array<T>::GetElement(i)*arr.Array<T>::GetElement(i));
+        temp->SetElement(i, this->GetElement(i)*arr.GetElement(i));
     }
     return *temp;
     

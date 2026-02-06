@@ -14,7 +14,7 @@ class Array
         const T operator[](int i) const;
         Array();
         Array(int n);
-        Array(Array &a);
+        Array(Array &a); // Copy Constructor
         ~Array();
         Array operator=(Array a);
     private:
