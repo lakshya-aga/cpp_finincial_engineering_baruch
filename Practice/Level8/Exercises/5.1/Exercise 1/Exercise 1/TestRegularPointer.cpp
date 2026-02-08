@@ -39,8 +39,10 @@ int main()
         cout << shapes2[i]->ToString() << endl;
     
     // Destroy the pointers
-    for (int i = 0; i != N; i++)
-        delete shapes2[i];
+    shapes2[0] = nullptr;
+    cout<<"No cleanup triggered"<<endl;
+    // for (int i = 0; i != N; i++)
+    //     delete shapes2[i];
     
     /* The array object shapes2 is destroyed by the explicitly defined Array destructor:
      delete [] m_data; */

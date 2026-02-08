@@ -41,6 +41,9 @@ int main()
     for (int i = 0; i < N; ++i)
         cout << (*shapes1[i]).ToString() << endl;
 
+        shapes1[0] = nullptr;
+        p = nullptr;
+        cout<<"This should trigger a cleanup"<<endl;
     cout << endl; // Deletion of the shapes will be done automatically after printing...
     
     /* The Shape objects along with their embedded objects are destroyed automatically. 
