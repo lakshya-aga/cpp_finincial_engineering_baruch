@@ -57,23 +57,23 @@ int main()
     // Batch 2
     // =========================
     
-// {
-//     Strike K(100.0);
-//     TimeToExpiry T(1);
-//     Rate r(0.00);
-//     Vol sig(0.20);
-//     Carry b(0.0); // for stock option: b = r
-//     Spot S(100);
+{
+    Strike K(100.0);
+    TimeToExpiry T(1);
+    Rate r(0.00);
+    Vol sig(0.20);
+    Carry b(0.0); // for stock option: b = r
+    Spot S(100);
 
-//     BlackScholesParams p(S, K, T, r, sig, b);
-//     double call = pricer.call(p);
-//     double put  = pricer.put(p);
+    BlackScholesParams p(S, K, T, r, sig, b);
+    double call = pricer.call(p);
+    double put  = pricer.put(p);
 
-//     std::cout << "Batch 2\n";
-//     std::cout << "Call: " << call << " (Expected ≈ 7.96632)\n";
-//     std::cout << "Put : " << put  << " (Expected ≈ 7.96632)\n\n";
+    std::cout << "Batch 2\n";
+    std::cout << "Call: " << call << " (Expected ≈ 7.96632)\n";
+    std::cout << "Put : " << put  << " (Expected ≈ 7.96632)\n\n";
     
-// }
+}
     
     std::cout << "Section A tests complete.\n";
 
