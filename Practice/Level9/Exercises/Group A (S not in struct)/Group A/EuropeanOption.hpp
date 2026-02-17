@@ -1,13 +1,3 @@
-//
-//  EuropeanOption.hpp
-//  Group A
-//
-//  European option pricing class that can price, use parity,
-//  and generate Greeks, with mesh functionality.
-//
-//  Created by Changheng Chen on 2/20/17.
-//  Copyright © 2017 Changheng Chen. All rights reserved.
-//
 
 #ifndef EuropeanOption_hpp
 #define EuropeanOption_hpp
@@ -21,14 +11,6 @@ class EuropeanOption
 private:
     OptionData data; // Incapulated data
     type_S S;        // Asset price
-    
-    /*// Uncomment instead the following for A.1 a)
-    type_T T;        // Expiry date
-    type_K K;        // Strike price
-    type_sig sig;    // Volatility
-    type_r r;        // Interest rate
-    type_b b;        // Carry of cost
-    */
     
 public:
     // (0) Initialization of private data members
